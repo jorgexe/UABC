@@ -1,0 +1,15 @@
+//Programa que solicite el primer nombre al usuario y lo imprima con la siguiente frase
+// "Bienvenido (nombre) al curso de programacion estructurada"
+#include <stdio.h>
+
+char nombre[8] = "";
+
+int main()
+{
+    printf("Introduzca su nombre: ");
+    scanf("%s", nombre);
+    
+    printf("Bienvenido %s al curso de programacion estructurada", nombre);
+    
+    return 0;
+}
