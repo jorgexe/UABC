@@ -1,0 +1,17 @@
+font: https://www.1001fonts.com/arcadeclassic-font.html
+
+
+menu background image: https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Darcade%2Bbackground&psig=AOvVaw1IGf0UFNp3iqweuoyZ3Lhf&ust=1701722651473000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMjD-YKR9IIDFQAAAAAdAAAAABBQ
+
+menu music:
+
+menu selection sound: https://mixkit.co/free-sound-effects/arcade/?page=2
+
+game music
+
+moving sound
+
+victory sound
+
+level completion: https://mixkit.co/free-sound-effects/goal/
+
