@@ -4,85 +4,88 @@
 
 #include <stdio.h>
 
-void burbuja(int arreglo[], int n);
-void seleccion(int arreglo[], int n);
-void insercion(int arreglo[], int n);
+void bubble(int array[], int n);
+void selection(int array[], int n);
+void insertion(int array[], int n);
 
 int main() {
-    int arreglo[] = {7, 12, 9 , 14, 11, 8, 3};
-    int n = 7;
+    int array_a[] = {7, 12, 9 , 14, 11, 8,3};
+    int array_b[] = {7, 12, 9 , 14, 11, 8,3};
+    int array_c[] = {7, 12, 9 , 14, 11, 8,3};
+    int size_a = sizeof(array_a)/sizeof(array_a[0]);
+    int size_b = sizeof(array_b)/sizeof(array_b[0]);
+    int size_c = sizeof(array_c)/sizeof(array_c[0]);
+
     int i;
 
     printf("Arreglo original: ");
-    for (i = 0; i < n; i++) {
-        printf("%d ", arreglo[i]);
+    for (i = 0; i < size_a; i++) {
+        printf("%d ", array_a[i]);
     }
     printf("\n");
 
-    burbuja(arreglo, n);
+    bubble(array_a, size_a);
     printf("Arreglo ordenado con burbuja: ");
-    for (i = 0; i < n; i++) {
-        printf("%d ", arreglo[i]);
+    for (i = 0; i < size_a; i++) {
+        printf("%d ", array_a[i]);
     }
     printf("\n");
 
-    int arreglo2[] = {7, 12, 9 , 14, 11, 8, 3};
-    seleccion(arreglo2, n);
+    selection(array_b, size_b);
     printf("Arreglo ordenado con selección: ");
-    for (i = 0; i < n; i++) {
-        printf("%d ", arreglo2[i]);
+    for (i = 0; i < size_b; i++) {
+        printf("%d ", array_b[i]);
     }
     printf("\n");
 
-    int arreglo3[] = {7, 12, 9 , 14, 11, 8, 3};
-    insercion(arreglo3, n);
+    insertion(array_c, size_c);
     printf("Arreglo ordenado con inserción: ");
-    for (i = 0; i < n; i++) {
-        printf("%d ", arreglo3[i]);
+    for (i = 0; i < size_c; i++) {
+        printf("%d ", array_c[i]);
     }
     printf("\n");
 
     return 0;
 }
 
-void burbuja(int arreglo[], int n) {
+void bubble(int array[], int n) {
     int i, j, aux;
     for (i = 0; i < n - 1; i++) {
         for (j = 0; j < n - 1; j++) {
-            if (arreglo[j] > arreglo[j + 1]) {
-                aux = arreglo[j];
-                arreglo[j] = arreglo[j + 1];
-                arreglo[j + 1] = aux;
+            if (array[j] > array[j + 1]) {
+                aux = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = aux;
             }
         }
     }
 }
 
-void seleccion(int arreglo[], int n) {
+void selection(int array[], int n) {
     int i, j, min, aux;
     for (i = 0; i < n - 1; i++) {
         min = i;
         for (j = i + 1; j < n; j++) {
-            if (arreglo[j] < arreglo[min]) {
+            if (array[j] < array[min]) {
                 min = j;
             }
         }
-        aux = arreglo[i];
-        arreglo[i] = arreglo[min];
-        arreglo[min] = aux;
+        aux = array[i];
+        array[i] = array[min];
+        array[min] = aux;
     }
 }
 
-void insercion(int arreglo[], int n) {
+void insertion(int array[], int n) {
     int i, j, aux;
     for (i = 1; i < n; i++) {
-        aux = arreglo[i];
+        aux = array[i];
         j = i - 1;
-        while (j >= 0 && arreglo[j] > aux) {
-            arreglo[j + 1] = arreglo[j];
+        while (j >= 0 && array[j] > aux) {
+            array[j + 1] = array[j];
             j--;
         }
-        arreglo[j + 1] = aux;
+        array[j + 1] = aux;
     }
 }
 
