@@ -1,0 +1,26 @@
+//Programa que muestre el resultado de cierta operacion
+
+#include <stdio.h>
+
+float a;
+float b;
+float c;
+float resultado;
+
+int main()
+{
+    printf("Ingrese el valor de a: ");
+    scanf("%f", &a);
+    
+    printf("Ingrese el valor de b: ");
+    scanf("%f", &b);
+    
+    printf("Ingrese el valor de c: ");
+    scanf("%f", &c);
+    
+    resultado = ((a+b)/c) * ((a+b)/c);
+    
+    printf("El resultado es: %.2f", resultado);
+
+    return 0;
+}
